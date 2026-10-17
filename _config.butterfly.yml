@@ -1,0 +1,373 @@
+# ============================================================
+# Butterfly 主题配置覆盖（与 themes/butterfly/_config.yml 合并）
+# 官方文档: https://butterfly.js.org/posts/aa73ee14/
+# ============================================================
+
+# ---------- 导航栏 ----------
+nav:
+  logo: /img/favicon.png
+  display_title: true
+  fixed: true
+
+menu:
+  首页: / || fas fa-home
+  归档: /archives/ || fas fa-archive
+  标签: /tags/ || fas fa-tags
+  分类: /categories/ || fas fa-folder-open
+  留言板: /message/ || fas fa-comment-dots
+  关于: /about/ || fas fa-heart
+  联维云官网: https://cloud.lecway.com/aff/DVYWFICJ || fas fa-cloud || _blank
+
+# ---------- 头像 / 社交 ----------
+avatar:
+  img: https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cute%20minecraft%20style%20blocky%20cube%20mascot%20character%2C%20kawaii%20green%20grass%20block%20with%20happy%20smiling%20face%20and%20pink%20cheeks%2C%20big%20sparkly%20eyes%2C%20flat%20cartoon%20illustration%2C%20clean%20white%20background%2C%20chibi%20style&image_size=square
+  effect: true
+
+social:
+  fab fa-github: https://github.com/wyr520 || Github
+
+# ---------- 首页大标题打字机 ----------
+subtitle:
+  enable: true
+  effect: true
+  startDelay: 300
+  typeSpeed: 90
+  backSpeed: 45
+  loop: true
+  source: false
+  sub:
+    - "记录 & 分享 · 联维云优惠通道"
+    - "首月五折 ♡ 新购八折"
+    - "(๑•̀ㅂ•́)✧ 欢迎光临小蛋糕の博客"
+
+# ---------- 各页面顶部图 ----------
+index_img: https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=minecraft%20style%20blocky%20landscape%20panorama%2C%20cute%20green%20grass%20blocks%20and%20oak%20trees%2C%20fluffy%20square%20white%20clouds%20in%20bright%20blue%20sky%2C%20small%20wooden%20house%20and%20flowers%2C%20kawaii%20game%20illustration%2C%20soft%20pastel%20colors%2C%20high%20quality&image_size=landscape_16_9
+default_top_img: https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=minecraft%20blocky%20sky%20with%20fluffy%20square%20clouds%20and%20floating%20grass%20block%20islands%2C%20twinkling%20stars%2C%20kawaii%20pastel%20colors%2C%20dreamy%20game%20illustration%2C%20soft%20gradient&image_size=landscape_16_9
+archive_img: https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=minecraft%20blocky%20sky%20with%20fluffy%20square%20clouds%20and%20floating%20grass%20block%20islands%2C%20twinkling%20stars%2C%20kawaii%20pastel%20colors%2C%20dreamy%20game%20illustration%2C%20soft%20gradient&image_size=landscape_16_9
+tag_img: https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=minecraft%20blocky%20sky%20with%20fluffy%20square%20clouds%20and%20floating%20grass%20block%20islands%2C%20twinkling%20stars%2C%20kawaii%20pastel%20colors%2C%20dreamy%20game%20illustration%2C%20soft%20gradient&image_size=landscape_16_9
+category_img: https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=minecraft%20blocky%20sky%20with%20fluffy%20square%20clouds%20and%20floating%20grass%20block%20islands%2C%20twinkling%20stars%2C%20kawaii%20pastel%20colors%2C%20dreamy%20game%20illustration%2C%20soft%20gradient&image_size=landscape_16_9
+
+# 文章默认封面（没写 cover 时随机用）
+default_cover:
+  - https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=minecraft%20style%20cute%20scene%20with%20grass%20blocks%2C%20colorful%20flowers%20and%20a%20small%20wooden%20house%2C%20fluffy%20square%20clouds%2C%20kawaii%20pastel%20colors%2C%20game%20illustration&image_size=landscape_16_9
+  - https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cute%20minecraft%20blocky%20animals%2C%20kawaii%20sheep%20pig%20and%20chicken%20on%20green%20grass%20block%20field%2C%20soft%20pastel%20colors%2C%20game%20illustration&image_size=landscape_16_9
+
+# 404
+error_404:
+  enable: true
+  subtitle: "页面走丢了 (｡•́︿•̀｡)"
+  description: "你要找的页面可能被苦力怕炸飞啦～"
+error_img:
+  enable: true
+  error_page_bg: https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cute%20minecraft%20style%20sad%20creeper%20lost%20in%20blocky%20cave%20holding%20a%20torch%2C%20kawaii%20pastel%20illustration%2C%20soft%20colors%2C%20blocky%20game%20style&image_size=landscape_4_3
+
+# ---------- 全站背景（MC 风格图片背景） ----------
+background: "url(https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=minecraft%20style%20soft%20pastel%20blue%20sky%20with%20small%20fluffy%20square%20clouds%20and%20distant%20grass%20block%20hills%2C%20very%20light%20and%20airy%2C%20kawaii%20game%20background%2C%20minimalist%2C%20gentle%20colors&image_size=landscape_16_9) no-repeat fixed center / cover"
+
+# ---------- 主题色（粉色系） ----------
+theme_color:
+  enable: true
+  main: "#ff86b5"
+  paginator: "#ff86b5"
+  button_hover: "#ff5f9e"
+  text_selection: "#ffd9ea"
+  link_color: "#ec4d92"
+  meta_color: "#d6336c"
+  hr_color: "#ffb9d6"
+  code_foreground: "#d6336c"
+  code_background: "rgba(255, 134, 181, 0.07)"
+  toc_color: "#ec4d92"
+  blockquote_padding_color: "#ff86b5"
+  blockquote_background_color: "#fff0f6"
+  scrollbar_color: "#ffb9d6"
+
+# ---------- 可爱字体 ----------
+font:
+  global_font_size: "16px"
+  code_font_size: "15px"
+  font_family: '"ZCOOL KuaiLe", "Yuanti SC", "YouYuan", "PingFang SC", "Microsoft YaHei", sans-serif'
+  code_font_family: '"JetBrains Mono", Consolas, monospace'
+
+blog_title_font:
+  font_link: "https://fonts.loli.net/css2?family=ZCOOL+KuaiLe&display=swap"
+  font_family: '"ZCOOL KuaiLe", "Yuanti SC", "YouYuan", cursive'
+
+# ---------- 评论：Giscus（GitHub 登录） ----------
+comments:
+  use: Giscus
+  text: true
+  lazyload: false
+  count: false
+  card_post_count: false
+
+giscus:
+  repo: wyr520/cake
+  repo_id: R_kgDOVMuiww
+  category: General
+  category_id: DIC_kwDOVMuiw84DIx1k
+  option:
+    mapping: pathname
+    reactions-enabled: 1
+    emit-metadata: 0
+    input-position: top
+    lang: zh-CN
+    theme: preferred_color_scheme
+
+# ---------- 本地搜索（5.x 用 search.use 选择引擎） ----------
+search:
+  use: local_search
+  placeholder: "(๑•̀ㅂ•́)✧ 搜点什么呢..."
+
+# ---------- 字数统计 ----------
+wordcount:
+  enable: true
+  post_wordcount: true
+  min2read: true
+  total_wordcount: true
+
+# ---------- 访客统计（不蒜子） ----------
+busuanzi:
+  site_uv: true
+  site_pv: true
+  page_pv: true
+
+# ---------- 文章页功能 ----------
+toc:
+  post: true
+  page: false
+  number: true
+  expand: false
+  style_simple: false
+  scroll_percent: true
+
+post_copyright:
+  enable: true
+  decode: false
+  author_href: /about/
+  license: CC BY-NC-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+noticeOutdate:
+  enable: true
+  style: simple
+  limit_day: 365
+  position: top
+  message_prev: "这篇文章最后更新于"
+  message_next: "天前，内容可能有点过时啦～"
+
+highlight_theme: mac
+highlight_copy: true
+highlight_lang: true
+highlight_shrink: false
+highlight_height_limit: 300
+
+copy:
+  enable: true
+  copyright:
+    enable: true
+    limit_count: 150
+
+post_meta:
+  index:
+    date_type: both
+    date_format: date
+    categories: true
+    tags: true
+    label: true
+  post:
+    date_type: both
+    date_format: date
+    categories: true
+    tags: true
+    label: true
+    comment: true
+
+beautify:
+  enable: true
+  field: post
+  title_prefix_icon: '\f0c1'
+  title_prefix_icon_color: "#ff86b5"
+
+# ---------- 图片 ----------
+fancybox: true
+medium_zoom: false
+
+lazyload:
+  enable: true
+  field: site
+  placeholder:
+  blur: false
+
+# ---------- 侧栏 ----------
+aside:
+  enable: true
+  hide: false
+  button: true
+  mobile: true
+  position: right
+  display:
+    archive: true
+    tag: true
+    category: true
+  card_author:
+    enable: true
+    description: "一只喜欢折腾服务器的小蛋糕 🍰"
+    button:
+      enable: true
+      icon: fas fa-cloud
+      text: "☁️ 去联维云逛逛"
+      link: https://cloud.lecway.com/aff/DVYWFICJ
+  card_announcement:
+    enable: true
+    content: '🎀 专属推广码 <b style="color:#d6336c">DVYWFICJ</b><br>首月五折 · 新购八折！'
+  card_recent_post:
+    enable: true
+    limit: 5
+    sort: date
+    sort_order:
+  card_categories:
+    enable: true
+    limit: 8
+    expand: none
+    sort_order:
+  card_tags:
+    enable: true
+    limit:
+    color: false
+    orderby: random
+    order: 1
+    sort_order:
+  card_archives:
+    enable: true
+    type: monthly
+    format: MMMM YYYY
+    order: -1
+    limit: 8
+    sort_order:
+  card_webinfo:
+    enable: true
+    post_count: true
+    last_push_date: true
+    sort_order:
+    runtime_date: "10/17/2026 00:00:00"
+
+# ---------- 页脚 ----------
+footer:
+  owner:
+    enable: true
+    since: 2026
+  custom_text: "用 ♥ 发电 · 联维云优惠通道"
+  copyright: false
+
+# ---------- 分享 ----------
+addtoany:
+  enable: true
+  item: wechat,telegram,twitter,copy_link
+
+# ---------- 体验增强 ----------
+pjax:
+  enable: true
+
+darkmode:
+  enable: true
+  button: true
+  autoChangeMode: false
+
+readmode: true
+
+preloader:
+  enable: false
+
+# ---------- 可爱特效 ----------
+# 关闭浏览器前缀（nib 与新 stylus 不兼容，关闭后不再加载 nib）
+css_prefix: false
+
+click_heart:
+  enable: true
+  mobile: false
+
+ClickShowText:
+  enable: true
+  text:
+    - "♡"
+    - "🌸"
+    - "✨"
+    - "💗"
+    - "⭐"
+    - "🎀"
+  fontSize: 15px
+  random: true
+  mobile: false
+
+canvas_fluttering_ribbon:
+  enable: false
+# 注意：canvas_ribbon 必须是对象（主题代码会读 canvas_ribbon.alpha），不能写布尔值
+canvas_ribbon:
+  enable: false
+  size: 150
+  alpha: 0.6
+  zIndex: -1
+canvas_nest:
+  enable: false
+fireworks:
+  enable: false
+  zIndex: 99999
+  mobile: false
+
+# ---------- 注入：字体双源 + 禁选中/禁右键 + Live2D 看板娘 ----------
+inject:
+  head:
+    - |
+      <link rel="preconnect" href="https://fonts.loli.net">
+    - |
+      <link rel="stylesheet" href="https://fonts.loli.net/css2?family=ZCOOL+KuaiLe&display=swap">
+    - |
+      <link rel="stylesheet" href="https://fonts.font.im/css2?family=ZCOOL+KuaiLe&display=swap">
+    - |
+      <style>
+        *:not(input):not(textarea):not([contenteditable="true"]) {
+          -webkit-user-select: none !important;
+          -moz-user-select: none !important;
+          -ms-user-select: none !important;
+          user-select: none !important;
+        }
+      </style>
+  bottom:
+    - |
+      <script defer src="https://cdn.jsdelivr.net/npm/live2d-widget@3.1.4/lib/L2Dwidget.min.js"></script>
+    - |
+      <script>
+        function isEditable(el) {
+          var tag = el.tagName;
+          return tag === 'INPUT' || tag === 'TEXTAREA' || el.isContentEditable;
+        }
+        document.addEventListener('contextmenu', function (e) { e.preventDefault(); });
+        document.addEventListener('selectstart', function (e) {
+          if (!isEditable(e.target)) e.preventDefault();
+        });
+        // 拦截双击/三连击选词
+        document.addEventListener('mousedown', function (e) {
+          if (e.detail > 1 && !isEditable(e.target)) e.preventDefault();
+        });
+      </script>
+    - |
+      <script>
+        window.addEventListener('load', function () {
+          setTimeout(function () {
+            if (!window.L2Dwidget) return;
+            try {
+              L2Dwidget.init({
+                model: {
+                  jsonPath: 'https://cdn.jsdelivr.net/npm/live2d-widget-model-shizuku@1.0.5/assets/shizuku.model.json',
+                  scale: 1
+                },
+                display: { position: 'left', width: 130, height: 260, hOffset: 20, vOffset: 0 },
+                mobile: { show: true, scale: 0.5 },
+                react: { opacityDefault: 0.85, opacityOnHover: 1 }
+              });
+            } catch (e) {}
+          }, 1500);
+        });
+      </script>
+
+favicon: /img/favicon.png
