@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>🎮 我的世界开服常见问题 FAQ</title>
+    <url>/cake/2026/10/18/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C%E5%BC%80%E6%9C%8D%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98FAQ/</url>
+    <content><![CDATA[<p>开服遇到问题先在这里搜一搜～（右上角搜索框也可以直接搜全站）</p>
+<p>持续更新中，没找到答案就在评论区留言问我！</p>
+<h2 id="开服的好处都有啥？"><a href="#开服的好处都有啥？" class="headerlink" title="开服的好处都有啥？"></a>开服的好处都有啥？</h2><p>如果大家对于自己当前的联机方式不满意，比如樱花 FRP 或小蓝盾等工具联机体验差、或者有海外玩家的场景，那么开服绝对适合你！它比普通内网穿透联机的延迟更低更稳定，适合追求高体验的玩家！</p>
+<p>其次它不需要正版账号，也没有任何年龄限制，完全不需要房主开房间！所有玩家延迟均不超过 60ms，存档 24H 全天运行，自己和小伙伴任何时候都能直接进入游玩，即使玩腻了也可以随时更换其他整合包继续开服哦。</p>
+<h2 id="服务器游玩卡顿怎么办？"><a href="#服务器游玩卡顿怎么办？" class="headerlink" title="服务器游玩卡顿怎么办？"></a>服务器游玩卡顿怎么办？</h2><p>由于 MC 是单核游戏优化比较差，而对于模组量大的整合包来说，如果玩家人数比较多，那么服务器会更容易吃不消！目前比较有效的优化方案是降低服务器视距，具体操作方法是：</p>
+<ol>
+<li>先将服务器 stop 关服</li>
+<li>编辑服务器根目录下的 <code>server.properties</code> 文件</li>
+<li>找到 <code>view-distance</code> 和 <code>simulation-distance</code>，将后面的数值都改成 <strong>6</strong></li>
+<li>保存重新开服</li>
+</ol>
+<p>这样可以最大程度降低服务器压力。当然如果经济允许，还是更建议升级服务器配置哈。</p>
+<h2 id="整合包能用-MCSM-开服吗？"><a href="#整合包能用-MCSM-开服吗？" class="headerlink" title="整合包能用 MCSM 开服吗？"></a>整合包能用 MCSM 开服吗？</h2><p>能，但是<strong>不推荐</strong>！整合包我们通常都使用 VPS 进行开服，MCSM 面板并不合适哦，因为它更多适用于新手小白用来开纯净服，或者加少量模组使用。</p>
+<p>经实测，MCSM 面板开整合包服的崩溃率会比 VPS 高一些，兼容性并没有那么好，直接用它开整合包服比较容易因兼容性问题导致游戏内出现 BUG 甚至崩服，所以一般整合包服都建议使用 VPS 来开哦。</p>
+<h2 id="服务器后台没有-NAT-端口映射？"><a href="#服务器后台没有-NAT-端口映射？" class="headerlink" title="服务器后台没有 NAT 端口映射？"></a>服务器后台没有 NAT 端口映射？</h2><p>大概率你所购买的是<strong>宁波地域</strong>的服务器！它采用独立公网 IP 的形式，因此在联维云后台并没有端口映射功能，但是不用担心，因为操作反而更简单：</p>
+<ul>
+<li><strong>开 MC 服</strong>：在 <code>server.properties</code> 配置文件设置端口的地方，将端口改为 25565（默认就是），玩家的进服 IP 只需要填写服务器默认 IP 就可以进，甚至不需要加端口号</li>
+<li><strong>开 Steam 游戏服</strong>：游戏内默认端口不需要修改，直接正常开服即可。玩家进服的 IP 就是服务器 IP 搭配默认端口号，例如默认端口 27015，那么只需要 <code>IP:27015</code> 就可以进服</li>
+</ul>
+<h2 id="想玩的整合包没有服务端咋办？"><a href="#想玩的整合包没有服务端咋办？" class="headerlink" title="想玩的整合包没有服务端咋办？"></a>想玩的整合包没有服务端咋办？</h2><p>一般来说其实大部分整合包都有配套的服务端，建议优先在整合包下载地址附近查找：</p>
+<ul>
+<li>CurseForge 上面的服务端一般藏在 <strong>Additional Files</strong> 里面</li>
+<li>国产整合包一般在发布地址旁边或者对应 QQ 群内</li>
+</ul>
+<p>如果完全找不到，有两种方案：</p>
+<ol>
+<li>花钱找人帮忙定制服务端，例如海鲜市场搜「MC 服务端定制」，一般二三十块钱就可以搞定；如果我有空的话也可以找我帮忙哈</li>
+<li>换其他带有服务端的整合包游玩</li>
+</ol>
+<h2 id="服务器里怎么开作弊？"><a href="#服务器里怎么开作弊？" class="headerlink" title="服务器里怎么开作弊？"></a>服务器里怎么开作弊？</h2><p>大家开完服后会发现自己在游戏里无法使用指令相关操作，这时候就需要给自己作弊权限：</p>
+<ol>
+<li>打开远程桌面连接服务器</li>
+<li>找到 MC 服务器的控制台窗口（那个命令提示符窗口，有很多英文字母在运行的地方）</li>
+<li>直接输入 <code>op 玩家名</code>（注意空格），这样就可以获得权限了</li>
+</ol>
+<p>另外其实不太建议开启作弊，容易破坏游戏平衡。如果需要传送功能，可以使用模组 <strong>FTB Essentials</strong> 平替。</p>
+<h2 id="服务器怎么关闭正版验证？"><a href="#服务器怎么关闭正版验证？" class="headerlink" title="服务器怎么关闭正版验证？"></a>服务器怎么关闭正版验证？</h2><p>一般教程里都会演示关闭正版验证的方法，如果没有演示那应该是服务端默认关闭了。如果自己的服务器一开始开着正版验证，后来有非正版玩家加入，那么就需要关闭：</p>
+<ol>
+<li>将服务器 stop 关服</li>
+<li>在服务器根目录下打开 <code>server.properties</code> 配置文件</li>
+<li>找到 <code>online-mode</code> 选项，将它修改成 <code>false</code></li>
+<li>保存后再开服即可</li>
+</ol>
+<div class="note red icon-padding modern"><i class="note-icon fas fa-triangle-exclamation"></i><p>注意：关闭正版验证后，原有的正版玩家背包会被清空！建议在关闭之前先把身上的物品都放入箱子里面哦。</p>
+</div>
+
+<h2 id="有小伙伴在国外如何联机？"><a href="#有小伙伴在国外如何联机？" class="headerlink" title="有小伙伴在国外如何联机？"></a>有小伙伴在国外如何联机？</h2><ol>
+<li>使用<strong>宁波或湖北地域</strong>的服务器来开服，因为它们不限制海外访问</li>
+<li>国外玩家需要挂<strong>回国线路的加速器</strong>进服游玩（雷神、UU 等加速器）</li>
+</ol>
+<p>这样的方案是目前测试下来体验最佳的。当然由于物理位置关系，只能尽量降低延迟和丢包，无法做到跟国内同等体验。</p>
+<h2 id="为什么服务器续费不是八折？"><a href="#为什么服务器续费不是八折？" class="headerlink" title="为什么服务器续费不是八折？"></a>为什么服务器续费不是八折？</h2><p>目前续费最多只能给到九折优惠，只有在新购时才能有更大优惠空间。这是因为代理规则的条例：注册超过三个月的用户在续费时，对于代理的返利只有 10%，因此我发九折基本不赚不亏哦，真不是因为我贪心哈！</p>
+<p>所以大家如果考虑长期持有服务器的话，更建议<strong>一次性购买年付或半年付</strong>，叠加我的优惠券就可以做到最实惠价格。例如年付 + 八折券，能够做到相当于每个月都是原价的五折左右哦。</p>
+<h2 id="本地存档怎么放进服务器开服？"><a href="#本地存档怎么放进服务器开服？" class="headerlink" title="本地存档怎么放进服务器开服？"></a>本地存档怎么放进服务器开服？</h2><ol>
+<li>首先找到自己的存档位置，一般在 MC 根目录文件夹内的 <code>saves</code> 里面，可以看到自己的存档名</li>
+<li>将存档进行压缩</li>
+<li>上传到服务器里面（用复制粘贴的方式即可上传），可以暂时上传到服务器桌面</li>
+<li>将服务器 stop 关服</li>
+<li>进入服务器根目录下的 <code>world</code> 文件夹里删除服务器存档</li>
+</ol>
+<p>记得观察一下文件结构，再跟自己的存档进行对比，就可以知道怎么替换啦。</p>
+<h2 id="为什么服务器重启后玩家一进服就崩？"><a href="#为什么服务器重启后玩家一进服就崩？" class="headerlink" title="为什么服务器重启后玩家一进服就崩？"></a>为什么服务器重启后玩家一进服就崩？</h2><p>你遇到的可能是整合包服务器很常见的一种情况——<strong>卡区块 BUG</strong>。它的特征是当某位玩家进服之后就会导致服务器崩溃（可以再多观察一下），需要找出是哪位玩家引起的崩服！</p>
+<p>解决方法：</p>
+<ul>
+<li><strong>没开正版验证</strong>：让那位玩家改个名，用新的身份进服游玩即可</li>
+<li><strong>开着正版验证</strong>：到服务器存档目录下的 <code>playerdata</code> 文件夹内，手动清除对应的玩家数据</li>
+<li>另一种方法可以保留玩家数据（比较麻烦不推荐）：使用 <strong>MCA Selector</strong> 软件手动删除掉那位玩家所在的区块。需要知道具体的区块才能操作，相对有局限性</li>
+</ul>
+<hr>
+<p>还有其他问题？在评论区用 GitHub 账号登录留言，我看到就会补充进来～</p>
+]]></content>
+      <categories>
+        <category>开服教程</category>
+      </categories>
+      <tags>
+        <tag>Minecraft</tag>
+        <tag>开服</tag>
+        <tag>教程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>🎀 欢迎来到小蛋糕の博客</title>
+    <url>/cake/2026/10/18/%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0%E5%B0%8F%E8%9B%8B%E7%B3%95%E3%81%AE%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<p>哈喽呀，欢迎来到 <strong>小蛋糕の博客</strong>！(๑•̀ㅂ•́)✧</p>
+<p>这里是我的小角落，会分享一些服务器折腾记录、开服教程，还有最重要的——<strong>联维云的专属优惠通道</strong>！</p>
+<h2 id="🎁-专属福利"><a href="#🎁-专属福利" class="headerlink" title="🎁 专属福利"></a>🎁 专属福利</h2><p>通过我的推广链接注册联维云，可以享受：</p>
+<ul>
+<li>🎉 <strong>首月五折</strong>，新购还能享八折优惠</li>
+<li>🏷️ 官方时长折扣<strong>可叠加</strong>，年付相当于每月五折</li>
+<li>🛠️ 开服遇到问题随时找我，小白也能轻松搞定</li>
+</ul>
+<div class="note pink icon-padding modern"><i class="note-icon fas fa-heart"></i><p>专属推广码：<strong>DVYWFICJ</strong>（点下方按钮直达通常无需手动填写哦）</p>
+</div>
+
+<a class="btn-beautify larger" href="https://cloud.lecway.com/aff/DVYWFICJ" title="♡ 立即注册领五折"><i class="fas fa-cloud"></i><span>♡ 立即注册领五折</span></a>
+
+<h2 id="📖-这里有什么"><a href="#📖-这里有什么" class="headerlink" title="📖 这里有什么"></a>📖 这里有什么</h2><ul>
+<li><strong>联维云</strong> 分类：优惠码使用指南、开服常见问题 FAQ</li>
+<li>后续会慢慢更新更多折腾记录和教程</li>
+</ul>
+<p>有任何问题都可以在文章下面<strong>用 GitHub 账号登录评论</strong>，我看到就会回复～</p>
+<p>祝你玩得开心！(´▽&#96;ʃ♡ƪ)</p>
+]]></content>
+      <categories>
+        <category>联维云</category>
+      </categories>
+      <tags>
+        <tag>公告</tag>
+        <tag>联维云</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>💰 联维云五折优惠码使用指南</title>
+    <url>/cake/2026/10/18/%E8%81%94%E7%BB%B4%E4%BA%91%E4%BA%94%E6%8A%98%E4%BC%98%E6%83%A0%E7%A0%81%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</url>
+    <content><![CDATA[<p>想用最便宜的价格开一台自己的云服务器？这篇教程手把手教你薅到最大折扣！</p>
+<h2 id="第一步：注册账号"><a href="#第一步：注册账号" class="headerlink" title="第一步：注册账号"></a>第一步：注册账号</h2><a class="btn-beautify larger" href="https://cloud.lecway.com/aff/DVYWFICJ" title="♡ 点我直达注册页"><i class="fas fa-cloud"></i><span>♡ 点我直达注册页</span></a>
+
+<p>通过上面的链接进入联维云官网注册，<strong>通常无需手动填写推广码</strong>，系统会自动绑定。</p>
+<p>如果没有自动绑定，注册时在推广码一栏填入：</p>
+<div class="note pink icon-padding flat"><i class="note-icon fas fa-tags"></i><p><strong>DVYWFICJ</strong></p>
+</div>
+
+<h2 id="第二步：选购服务器"><a href="#第二步：选购服务器" class="headerlink" title="第二步：选购服务器"></a>第二步：选购服务器</h2><ul>
+<li>新用户<strong>首月五折</strong>，<strong>新购八折</strong></li>
+<li>云服务器、游戏云、对象存储、裸金属等产品都适用</li>
+<li>还能<strong>叠加官方时长折扣</strong>！</li>
+</ul>
+<h2 id="💡-省钱小技巧"><a href="#💡-省钱小技巧" class="headerlink" title="💡 省钱小技巧"></a>💡 省钱小技巧</h2><blockquote>
+<p>如果你打算长期持有服务器，<strong>强烈建议直接上年付或半年付</strong>。</p>
+</blockquote>
+<p>算一笔账：年付时长折扣 + 我的八折券，折算下来<strong>相当于每个月都是原价的五折左右</strong>，是最实惠的买法！</p>
+<h2 id="❓-为什么续费只有九折？"><a href="#❓-为什么续费只有九折？" class="headerlink" title="❓ 为什么续费只有九折？"></a>❓ 为什么续费只有九折？</h2><p>有小伙伴问续费为什么不是八折——这是代理规则决定的：注册超过三个月后，续费返利只有 10%，发九折基本是不赚不亏的价格啦。</p>
+<p>所以<strong>一次性买年付</strong>才是省钱的最优解哦！</p>
+<h2 id="🛠️-开服遇到问题？"><a href="#🛠️-开服遇到问题？" class="headerlink" title="🛠️ 开服遇到问题？"></a>🛠️ 开服遇到问题？</h2><div class="note blue icon-padding modern"><i class="note-icon fas fa-circle-question"></i><p>开服卡住、不懂怎么操作，都可以在本站评论区留言（GitHub 登录即可），或者先看看这篇 👉 <a href="/cake/2026/10/18/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C%E5%BC%80%E6%9C%8D%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98FAQ/">我的世界开服常见问题 FAQ</a></p>
+</div>
+
+<a class="btn-beautify larger" href="https://cloud.lecway.com/aff/DVYWFICJ" title="♡ 马上去领优惠"><i class="fas fa-gift"></i><span>♡ 马上去领优惠</span></a>
+]]></content>
+      <categories>
+        <category>联维云</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+        <tag>联维云</tag>
+        <tag>优惠码</tag>
+      </tags>
+  </entry>
+</search>
