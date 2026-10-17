@@ -210,6 +210,42 @@
     if (e.detail > 1 && !isEditable(e.target)) e.preventDefault();
   });
 </script>
+<div id="ds-whale" title="点我说话～">
+  <div id="ds-whale-bubble"></div>
+  <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cute%20kawaii%20deepseek%20style%20baby%20blue%20whale%20mascot%2C%20chubby%20round%20body%20with%20happy%20smiling%20face%20and%20pink%20cheeks%2C%20small%20water%20spout%20on%20head%2C%20soft%20pastel%20blue%20colors%2C%20flat%20cartoon%20illustration%2C%20clean%20white%20background%2C%20chibi%20style&image_size=square" alt="小蓝鲸">
+</div>
+<style>
+  #ds-whale { position: fixed; left: 18px; bottom: 12px; z-index: 999; width: 110px; cursor: pointer; user-select: none; -webkit-user-select: none; animation: dsWhaleFloat 3s ease-in-out infinite; filter: drop-shadow(0 6px 12px rgba(80,140,255,.35)); transition: transform .25s; }
+  #ds-whale:hover { transform: scale(1.08) rotate(-3deg); }
+  #ds-whale img { width: 100%; display: block; border-radius: 50%; pointer-events: none; }
+  #ds-whale-bubble { position: absolute; left: 88px; bottom: 62px; min-width: 150px; max-width: 220px; padding: 8px 12px; background: #fff; color: #d6336c; font-size: 13px; line-height: 1.5; border: 2px solid #ffb9d6; border-radius: 14px; box-shadow: 0 4px 14px rgba(255,134,181,.35); opacity: 0; transform: translateY(8px) scale(.9); transform-origin: left bottom; transition: all .25s; pointer-events: none; }
+  #ds-whale-bubble.show { opacity: 1; transform: translateY(0) scale(1); }
+  #ds-whale-bubble:after { content: ''; position: absolute; left: -8px; bottom: 14px; width: 12px; height: 12px; background: #fff; border-left: 2px solid #ffb9d6; border-bottom: 2px solid #ffb9d6; transform: rotate(45deg); }
+  @keyframes dsWhaleFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+  @media (max-width: 768px) { #ds-whale { width: 74px; left: 10px; bottom: 8px; } #ds-whale-bubble { left: 62px; bottom: 44px; min-width: 120px; font-size: 12px; } }
+</style>
+<script>
+  (function () {
+    var words = [
+      '你好呀，我是小蓝鲸～',
+      '注册联维云，推广码 DVYWFICJ 有优惠哦～',
+      '首月五折 ♡ 新购八折，别错过啦',
+      '点菜单「后台管理」可以发文章哦',
+      '(๑•̀ㅂ•́)✧ 今天也要加油鸭'
+    ];
+    var idx = 0, timer = null;
+    var box = document.getElementById('ds-whale');
+    var bubble = document.getElementById('ds-whale-bubble');
+    if (!box || !bubble) return;
+    box.addEventListener('click', function () {
+      bubble.textContent = words[idx % words.length];
+      idx++;
+      bubble.classList.add('show');
+      clearTimeout(timer);
+      timer = setTimeout(function () { bubble.classList.remove('show'); }, 3200);
+    });
+  })();
+</script>
 <script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/click-heart.min.js" async="async" mobile="false"></script><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js" defer="defer"></script><script>document.addEventListener('DOMContentLoaded', () => {
   const pjaxSelectors = ["meta[property=\"og:image\"]","meta[property=\"og:title\"]","meta[property=\"og:url\"]","meta[property=\"og:description\"]","link[rel=\"canonical\"]","head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
 
